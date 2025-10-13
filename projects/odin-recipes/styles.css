@@ -1,6 +1,10 @@
 body {
     background-color: #eeeeee;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.subtitle {
+    color: #888;
 }
 
 img {
@@ -19,7 +23,7 @@ ol li {
     margin: 16px;
 }
 
-h1, h2, p {
+h1, h2, h4, p {
     text-align: center;
 }
 
