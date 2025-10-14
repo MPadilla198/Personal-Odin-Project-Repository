@@ -27,6 +27,10 @@ h1, h2, h4, p {
     text-align: center;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: cadetblue;
+}
+
 div {
     background-color: #FFFFFF;
     margin: 24px 32px;
@@ -36,4 +40,9 @@ div {
 
 div.home-nav {
     text-align: center;
+}
+
+.header-title {
+    text-decoration: none;
+    color: cadetblue;
 }
