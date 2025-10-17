@@ -37,12 +37,31 @@ body {
 /* Quote Section */
 .quote-section {
     background-color: #E5E7EB;
+
+    padding: 32px 25%;
 }
 
 .quote-section .quote {
     font-size: 36px;
     color: #1F2937;
     font-weight: 300;
+}
+
+.quote-section .credit {
+    font-weight: bolder;
+    text-align: right;
+}
+
+/* Call to Action */
+.call-to-action {
+    background-color: #3882F6;
+    color: #F9FAF8;
+    margin: 24px 36px;
+    padding: 16px 48px;
+}
+
+.call-to-action button {
+    border-color: #F9FAF8;
 }
 
 /* Sign up buttons */
@@ -54,4 +73,10 @@ button {
 /* Footer */
 .footer {
     background-color: #1f2937;
+    color: #F9FAF8;
+
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 24px 0px;
 }
