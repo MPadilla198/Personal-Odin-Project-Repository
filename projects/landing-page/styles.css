@@ -1,0 +1,57 @@
+body {
+    font-family: roboto;
+}
+
+/* Header */
+.header {
+    background-color: #1f2937;
+}
+
+.header .hero .aside .title {
+    font-size: 48px;
+    color: #F9FAF8;
+    font-weight: 900;
+}
+
+.header .bar .logo {
+    font-size: 24px;
+    color: #F9FAF8;
+}
+
+.header .bar .navigation a {
+    text-decoration: none;
+}
+
+.header .hero .aside .subtitle, .header .bar .navigation a {
+    font-size: 18px;
+    color: #F9FAF8;
+}
+
+/* Information deck */
+.info-deck .heading {
+    font-size: 36px;
+    color: #1F2937;
+    font-weight: 900;
+}
+
+/* Quote Section */
+.quote-section {
+    background-color: #E5E7EB;
+}
+
+.quote-section .quote {
+    font-size: 36px;
+    color: #1F2937;
+    font-weight: 300;
+}
+
+/* Sign up buttons */
+button {
+    color: #F9FAF8;
+    background-color: #3882F6;
+}
+
+/* Footer */
+.footer {
+    background-color: #1f2937;
+}
