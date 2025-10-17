@@ -37,8 +37,11 @@ body {
 /* Quote Section */
 .quote-section {
     background-color: #E5E7EB;
+    padding: 64px 25%;
 
-    padding: 32px 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
 .quote-section .quote {
@@ -56,8 +59,29 @@ body {
 .call-to-action {
     background-color: #3882F6;
     color: #F9FAF8;
-    margin: 24px 36px;
-    padding: 16px 48px;
+    margin: 4em 17.5%;
+    padding: 2em 4em;
+    border-radius: 6px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.call-to-action .text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.call-to-action .title {
+    font-size: large;
+    font-weight: bolder;
+}
+
+.call-to-action .subtitle {
+    font-size: small;
+    font-weight: 300;
 }
 
 .call-to-action button {
@@ -68,15 +92,21 @@ body {
 button {
     color: #F9FAF8;
     background-color: #3882F6;
+    border-radius: 6px;
+    border-style: solid;
+    font-weight: bolder;
+    padding: 4px 16px;
+    flex-shrink: 0;
 }
 
 /* Footer */
 .footer {
     background-color: #1f2937;
     color: #F9FAF8;
+    font-size: small;
 
     display: flex;
     justify-content: center;
     gap: 8px;
-    padding: 24px 0px;
+    padding: 2em 0px;
 }
