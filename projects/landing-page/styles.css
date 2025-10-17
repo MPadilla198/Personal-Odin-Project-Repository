@@ -1,30 +1,78 @@
 body {
     font-family: roboto;
+    padding: 0px;
+    margin: 0px;
 }
 
 /* Header */
 .header {
     background-color: #1f2937;
+    padding: 16px 15% 48px 15%;
 }
 
-.header .hero .aside .title {
-    font-size: 48px;
-    color: #F9FAF8;
-    font-weight: 900;
+.header .bar {
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .header .bar .logo {
     font-size: 24px;
     color: #F9FAF8;
+    font-weight: bolder;
+}
+
+.header .bar .navigation {
+    display: flex;
+    gap: 1.5em;
 }
 
 .header .bar .navigation a {
     text-decoration: none;
 }
 
-.header .hero .aside .subtitle, .header .bar .navigation a {
-    font-size: 18px;
+.header .bar .navigation a span {
+    font-size: small;
+}
+
+.header .hero {
+    display: flex;
+    gap: 8em;
+}
+
+.header .hero .aside {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+}
+
+.header .hero .aside .title {
+    font-size: 48px;
     color: #F9FAF8;
+    font-weight: 900;
+    flex-wrap: wrap;
+}
+
+.header .hero .image {
+    background-color: #666666;
+    color: #F9FAF8;
+    width: inherit;
+    height: inherit;
+    font-size: smaller;
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .hero .aside .subtitle,
+.header .bar .navigation a {
+    font-size: 18px;
+    color: #E5E7EB;
 }
 
 /* Information deck */
