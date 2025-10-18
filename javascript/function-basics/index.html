@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Javascript Function Basics</title>
+    </head>
+
+    <body>
+        <script>
+            // 1
+            function add7(number) {
+                return number + 7
+            }
+            console.log(add7(10)) // result: 17
+
+            // 2
+            function multiply(number1, number2) {
+                return number1 * number2
+            }
+
+            console.log(multiply(3, 2)) // result: 6
+
+            // 3
+            function capitalize(str) {
+                str = str.toLowerCase()
+                return str.substr(0,1).toUpperCase() + str.substr(1)
+            }
+
+            console.log(capitalize("abcd")) // result: "Abcd"
+            console.log(capitalize("ABCD")) // result: "Abcd"
+            console.log(capitalize("aBcD")) // result: "Abcd"
+
+            // 4
+            function lastLetter(str) {
+                return str.at(-1)
+            }
+
+            console.log(lastLetter("abcd")) // result: "d"
+        </script>
+    </body>
+</html>
