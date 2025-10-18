@@ -1,0 +1,11 @@
+div.button-row {
+    display: flex;
+    gap: 16px;
+}
+
+button {
+    background-color: cornflowerblue;
+    color: white;
+    border-style: none;
+    padding: 8px 24px;
+}
