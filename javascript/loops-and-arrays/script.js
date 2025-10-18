@@ -56,3 +56,17 @@ arr.sort()
 arr = arr.reverse()
 
 alert( arr ); // 8, 5, 2, 1, -10
+
+
+// https://javascript.info/array-methods#copy-and-sort-array
+function copySorted(arr) {
+    return arr.toSorted()
+}
+
+// Test
+arr = ["HTML", "JavaScript", "CSS"];
+
+let sorted = copySorted(arr);
+
+alert( sorted ); // CSS, HTML, JavaScript
+alert( arr ); // HTML, JavaScript, CSS (no changes)
