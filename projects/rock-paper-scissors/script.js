@@ -76,4 +76,4 @@ function playGame() {
     console.log("Computer score: " + computerScore)
 }
 
-playGame()
+// playGame()
