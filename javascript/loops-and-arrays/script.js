@@ -103,3 +103,16 @@ console.log(arr)
 
 shuffle(arr); // arr = [3, 1, 2]
 console.log(arr)
+
+
+// https://javascript.info/array-methods#filter-unique-array-members
+function unique(arr) {
+  return Array.from(new Set(arr))
+}
+
+// Test
+let strings = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
+
+alert( unique(strings) ); // Hare, Krishna, :-O
