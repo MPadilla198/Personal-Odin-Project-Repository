@@ -70,3 +70,36 @@ let sorted = copySorted(arr);
 
 alert( sorted ); // CSS, HTML, JavaScript
 alert( arr ); // HTML, JavaScript, CSS (no changes)
+
+
+// https://javascript.info/array-methods#shuffle-an-array
+// My solution
+// function shuffle(arr) {
+//     let copy = arr.slice()
+//     let size = arr.length
+//     arr.splice(0, arr.length) // Clear array
+//     
+//     for (let i = 0; i < size; i++) {
+//         let index = Math.floor(Math.random() * copy.length)
+//         let value = copy[index]
+//         copy.splice(index, 1)
+//         arr.push(value)
+//     }
+// }
+
+// Simpler, more intuitive solution
+function shuffle(arr) {
+    arr.sort(() => Math.random() - 0.5)
+}
+
+// Test
+arr = [1, 2, 3];
+
+shuffle(arr); // arr = [3, 2, 1]
+console.log(arr)
+
+shuffle(arr); // arr = [2, 1, 3]
+console.log(arr)
+
+shuffle(arr); // arr = [3, 1, 2]
+console.log(arr)
