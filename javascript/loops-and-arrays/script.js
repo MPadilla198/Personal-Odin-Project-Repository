@@ -28,3 +28,22 @@ let filtered = filterRange(arr, 1, 4);
 
 alert( filtered ); // 3,1 (matching values)
 alert( arr ); // 5,3,8,1 (not modified)
+
+
+// https://javascript.info/array-methods#filter-range-in-place
+function filterRangeInPlace(arr, a, b) {
+    for (let i = 0; i < arr.length ; i++) {
+        let value = arr[i]
+
+        if (value < a || value > b) {
+            arr.splice(i, 1)
+            i--
+        }
+    }
+}
+
+// Test
+arr = [5, 3, 8, 1];
+filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
+
+alert( arr ); // [3, 1]
