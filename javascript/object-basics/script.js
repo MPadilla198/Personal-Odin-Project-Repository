@@ -4,13 +4,37 @@ let john = { name: "John", age: 25 };
 let pete = { name: "Pete", age: 30 };
 let mary = { name: "Mary", age: 28 };
 
-let users = [ john, pete, mary ];
+let users = [john, pete, mary];
 
 let names = users.map(user => user.name)
 
-alert( names ); // John, Pete, Mary
+alert(names); // John, Pete, Mary
 
 // Map to Objects
+// https://javascript.info/array-methods#map-to-objects
+john = { name: "John", surname: "Smith", id: 1 };
+pete = { name: "Pete", surname: "Hunt", id: 2 };
+mary = { name: "Mary", surname: "Key", id: 3 };
+
+users = [john, pete, mary];
+
+let usersMapped = users.map(user => {
+    return {
+        fullName: `${user.name} ${user.surname}`,
+        id: user.id
+    }
+})
+
+/*
+usersMapped = [
+  { fullName: "John Smith", id: 1 },
+  { fullName: "Pete Hunt", id: 2 },
+  { fullName: "Mary Key", id: 3 }
+]
+*/
+
+alert(usersMapped[0].id) // 1
+alert(usersMapped[0].fullName) // John Smith
 
 // Sort Users by Age
 
