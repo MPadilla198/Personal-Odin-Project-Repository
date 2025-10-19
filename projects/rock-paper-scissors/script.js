@@ -73,11 +73,26 @@ function playRound(humanChoice, computerChoice) {
 
     humanScoreDiv.textContent = humanScore
     computerScoreDiv.textContent = computerScore
+
+    if (humanScore == 5) {
+        const announcement = document.querySelector("#announcement")
+        announcement.textContent = "You won!"
+        announcement.style.color = "green"
+    } else if (computerScore == 5) {
+        const announcement = document.querySelector("#announcement")
+        announcement.textContent = "You lost!"
+        announcement.style.color = "red"
+    }
 }
 
 let buttonRow = document.querySelector('#button-row')
 
 buttonRow.addEventListener("click", function (event) {
+    // If either opponent reaches 5, then game is done.
+    if (humanScore == 5 || computerScore == 5) {
+        return
+    }
+
     const target = event.target
 
     const computerSelection = getComputerChoice()

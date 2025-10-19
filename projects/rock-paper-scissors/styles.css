@@ -9,10 +9,6 @@ div.main-col {
     gap: 48px;
 }
 
-div.col {
-    /* gap: 8px; */
-}
-
 div.row {
     display: flex;
     gap: 32px;
