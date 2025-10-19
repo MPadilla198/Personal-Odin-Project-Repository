@@ -13,6 +13,14 @@ resetButton.addEventListener("click", (event) => {
     }
 })
 
+function getRandomRgbString() {
+    const r = Math.floor(Math.random() * 256)
+    const g = Math.floor(Math.random() * 256)
+    const b = Math.floor(Math.random() * 256)
+
+    return `rgb(${r}, ${g}, ${b})`
+}
+
 function buildScreen(size) {
     // Clear the board
     while (container.firstChild) {
@@ -29,7 +37,8 @@ function buildScreen(size) {
             column.classList.add("col")
 
             column.addEventListener("mouseenter", (event) => {
-                column.style.backgroundColor = "blue"
+
+                column.style.backgroundColor = getRandomRgbString()
             })
 
             row.appendChild(column)
