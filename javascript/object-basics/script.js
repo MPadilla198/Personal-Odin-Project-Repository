@@ -37,6 +37,23 @@ alert(usersMapped[0].id) // 1
 alert(usersMapped[0].fullName) // John Smith
 
 // Sort Users by Age
+// https://javascript.info/array-methods#sort-users-by-age
+function sortByAge(array) {
+    array.sort((a, b) => a.age - b.age)
+}
+
+john = { name: "John", age: 25 };
+pete = { name: "Pete", age: 30 };
+mary = { name: "Mary", age: 28 };
+
+let arr = [ pete, john, mary ];
+
+sortByAge(arr);
+
+// now: [john, mary, pete]
+alert(arr[0].name); // John
+alert(arr[1].name); // Mary
+alert(arr[2].name); // Pete
 
 // Get average age
 
