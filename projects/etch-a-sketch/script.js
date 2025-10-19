@@ -10,6 +10,10 @@ for (let i = 0; i < SIZE; i++) {
         const column = document.createElement("div")
         column.classList.add("col")
 
+        column.addEventListener("mouseenter", (event) => {
+            column.style.backgroundColor = "blue"
+        })
+
         row.appendChild(column)
     }
 
