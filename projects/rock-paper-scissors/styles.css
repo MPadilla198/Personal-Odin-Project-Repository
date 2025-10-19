@@ -1,13 +1,21 @@
-div#button-row {
-    display: flex;
-    gap: 16px;
-}
-
+div.main-col,
 div.col {
     display: flex;
     flex-direction: column;
-    gap: 32px;
     align-items: center;
+}
+
+div.main-col {
+    gap: 48px;
+}
+
+div.col {
+    /* gap: 8px; */
+}
+
+div.row {
+    display: flex;
+    gap: 32px;
 }
 
 button {

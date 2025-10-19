@@ -10,6 +10,13 @@ function getHumanChoice() {
 let humanScore = 0
 let computerScore = 0
 
+const humanScoreDiv = document.querySelector("#human-score")
+humanScoreDiv.textContent = humanScore
+
+const computerScoreDiv = document.querySelector("#computer-score")
+computerScoreDiv.textContent = computerScore
+
+
 function playRound(humanChoice, computerChoice) {
     const resultsDiv = document.querySelector("#results")
 
@@ -63,6 +70,9 @@ function playRound(humanChoice, computerChoice) {
             resultsDiv.textContent = humanChoice + " is not an option. Please, try again."
             break
     }
+
+    humanScoreDiv.textContent = humanScore
+    computerScoreDiv.textContent = computerScore
 }
 
 let buttonRow = document.querySelector('#button-row')
