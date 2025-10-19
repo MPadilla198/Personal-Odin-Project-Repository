@@ -3,6 +3,13 @@ div#button-row {
     gap: 16px;
 }
 
+div.col {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+
 button {
     background-color: cornflowerblue;
     color: white;
