@@ -1,4 +1,4 @@
-div.button-row {
+div#button-row {
     display: flex;
     gap: 16px;
 }
