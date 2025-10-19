@@ -56,5 +56,17 @@ alert(arr[1].name); // Mary
 alert(arr[2].name); // Pete
 
 // Get average age
+// https://javascript.info/array-methods#get-average-age
+function getAverageAge(array) {
+    return array.reduce((prev, user) => prev + user.age, 0) / array.length
+}
+
+john = { name: "John", age: 25 };
+pete = { name: "Pete", age: 30 };
+mary = { name: "Mary", age: 29 };
+
+arr = [ john, pete, mary ];
+
+alert( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
 
 // Create Keyed Object from Array
