@@ -70,3 +70,29 @@ arr = [ john, pete, mary ];
 alert( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
 
 // Create Keyed Object from Array
+// https://javascript.info/array-methods#create-keyed-object-from-array
+function groupById(users) {
+    return users.reduce((prev, user) => {
+        prev[user.id] = user
+        return prev
+    }, {})
+}
+
+users = [
+  {id: 'john', name: "John Smith", age: 20},
+  {id: 'ann', name: "Ann Smith", age: 24},
+  {id: 'pete', name: "Pete Peterson", age: 31},
+];
+
+let usersById = groupById(users);
+console.log(usersById)
+
+/*
+// after the call we should have:
+
+usersById = {
+  john: {id: 'john', name: "John Smith", age: 20},
+  ann: {id: 'ann', name: "Ann Smith", age: 24},
+  pete: {id: 'pete', name: "Pete Peterson", age: 31},
+}
+*/
