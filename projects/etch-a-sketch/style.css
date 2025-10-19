@@ -5,6 +5,14 @@ body {
     width: 100vw;
 }
 
+.float {
+    position: fixed;
+}
+
+button {
+    padding: 4px 8px;
+}
+
 div.container {
     display: flex;
     flex-grow: 1;
