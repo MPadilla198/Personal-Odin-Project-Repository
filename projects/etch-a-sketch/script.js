@@ -35,10 +35,14 @@ function buildScreen(size) {
         for (let j = 0; j < size; j++) {
             const column = document.createElement("div")
             column.classList.add("col")
+            column.style.opacity = "100%"
 
             column.addEventListener("mouseenter", (event) => {
 
                 column.style.backgroundColor = getRandomRgbString()
+                if (column.style.opacity > 0.0) {
+                    column.style.opacity -= 0.1
+                }
             })
 
             row.appendChild(column)
