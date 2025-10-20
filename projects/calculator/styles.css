@@ -19,3 +19,8 @@ button {
     font-size: large;
     font-weight: 900;
 }
+
+button#back-space {
+    height: 36px;
+    width: 104px;
+}

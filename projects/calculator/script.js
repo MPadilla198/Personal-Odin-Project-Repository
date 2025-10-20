@@ -11,7 +11,7 @@ function multiply(a, b) {
 }
 
 function divide(a, b) {
-    return a / b
+    return Math.floor(a / b)
 }
 
 let lhs = null
@@ -48,7 +48,7 @@ function integerSelect(number) {
         if (rhs == null) {
             rhs = number
         } else {
-            rhs = (lhs * 10) + number
+            rhs = (rhs * 10) + number
         }
         display.textContent = rhs
     }
@@ -146,5 +146,16 @@ _clear.addEventListener('click', (event) => {
     lhs = null
     rhs = null
     operator = null
+})
+
+const _backSpace = document.querySelector('#back-space')
+_backSpace.addEventListener('click', (event) => {
+    if (rhs != null) {
+        rhs = Math.floor(rhs / 10)
+        display.textContent = rhs
+    } else if (lhs != null) {
+        lhs = Math.floor(lhs / 10)
+        display.textContent = lhs
+    }
 })
 
