@@ -54,8 +54,32 @@ function integerSelect(number) {
     }
 }
 
-function operatorSelect(operator) {
-    
+function operatorSelect(_operator) {
+    // If we have an operator and both numbers, 
+    // then we must compute first, set lhs to result and display result
+    if (operator != null && lhs != null && rhs != null) {
+        if (operator == '/' && rhs == 0) {
+            display.textContent = "ERROR! CANNOT DIVIDE BY 0"
+
+            // Set lhs, rhs, and operator to null
+            lhs = null
+            rhs = null
+            operator = null
+
+            return
+        }
+        const result = operate(operator, lhs, rhs)
+        console.log(`${lhs} ${operator} ${rhs} = ${result}`)
+
+        lhs = result
+        display.textContent = result
+    }
+
+    // Overwrite the operator
+    operator = _operator
+
+    // Set rhs to null
+    rhs = null
 }
 
 const _1 = document.querySelector('#one')
@@ -83,10 +107,44 @@ const _0 = document.querySelector('#zero')
 _0.addEventListener('click', (event) => { integerSelect(0) })
 
 const _add = document.querySelector('#add')
+_add.addEventListener('click', (event) => { operatorSelect('+') })
 const _subtract = document.querySelector('#subtract')
+_subtract.addEventListener('click', (event) => { operatorSelect('-') })
 const _multiply = document.querySelector('#multiply')
+_multiply.addEventListener('click', (event) => { operatorSelect('*') })
 const _divide = document.querySelector('#divide')
+_divide.addEventListener('click', (event) => { operatorSelect('/') })
 
 const _equal = document.querySelector('#equal')
+_equal.addEventListener('click', (event) => {
+    // If we have an operator and both numbers, 
+    // then we must compute first and display result
+    if (operator != null && lhs != null && rhs != null) {
+        if (operator == '/' && rhs == 0) {
+            display.textContent = "ERROR! CANNOT DIVIDE BY 0"
+        } else {
+            const result = operate(operator, lhs, rhs)
+            console.log(`${lhs} ${operator} ${rhs} = ${result}`)
+
+            display.textContent = result
+        }
+    } else {
+        display.textContent = "ERROR!"
+    }
+
+    // Set lhs, rhs, and operator to null
+    lhs = null
+    rhs = null
+    operator = null
+})
 const _clear = document.querySelector('#clear')
+_clear.addEventListener('click', (event) => {
+    // Reset display text
+    display.textContent = '---'
+
+    // Set lhs, rhs, and operator to null
+    lhs = null
+    rhs = null
+    operator = null
+})
 
