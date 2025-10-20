@@ -22,16 +22,14 @@ function operate(_operator, _lhs, _rhs) {
     switch (_operator) {
         case '+':
             return add(_lhs, _rhs)
-            break
         case '-':
             return subtract(_lhs, _rhs)
-            break
         case '*':
             return multiply(_lhs, _rhs)
-            break
         case '/':
             return divide(_lhs, _rhs)
-            break
+        default:
+            console.error(`${_operator} is not a valid operator.`)
 
     }
 }
