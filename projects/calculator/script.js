@@ -34,42 +34,53 @@ function operate(_operator, _lhs, _rhs) {
     }
 }
 
-function integerSelect(numer) {
+const display = document.querySelector('#display')
+
+function integerSelect(number) {
     if (operator == null) {
         if (lhs == null) {
             lhs = number
         } else {
             lhs = (lhs * 10) + number
         }
+        display.textContent = lhs
     } else {
         if (rhs == null) {
             rhs = number
         } else {
             rhs = (lhs * 10) + number
         }
+        display.textContent = rhs
     }
 }
 
-const _1 = document.querySelector('#1')
-_1.addEventListener('click', (event) => integerSelect(1))
-const _2 = document.querySelector('#2')
-_2.addEventListener('click', (event) => integerSelect(2))
-const _3 = document.querySelector('#3')
-_3.addEventListener('click', (event) => integerSelect(3))
+function operatorSelect(operator) {
+    
+}
 
-const _4 = document.querySelector('#4')
-_4.addEventListener('click', (event) => integerSelect(4))
-const _5 = document.querySelector('#5')
-_5.addEventListener('click', (event) => integerSelect(5))
-const _6 = document.querySelector('#6')
-_6.addEventListener('click', (event) => integerSelect(6))
+const _1 = document.querySelector('#one')
+_1.addEventListener('click', (event) => { integerSelect(1) })
+const _2 = document.querySelector('#two')
+_2.addEventListener('click', (event) => { integerSelect(2) })
+const _3 = document.querySelector('#three')
+_3.addEventListener('click', (event) => { integerSelect(3) })
 
-const _7 = document.querySelector('#7')
-_7.addEventListener('click', (event) => integerSelect(7))
-const _8 = document.querySelector('#8')
-_8.addEventListener('click', (event) => integerSelect(8))
-const _9 = document.querySelector('#9')
-_9.addEventListener('click', (event) => integerSelect(9))
+const _4 = document.querySelector('#four')
+_4.addEventListener('click', (event) => { integerSelect(4) })
+const _5 = document.querySelector('#five')
+_5.addEventListener('click', (event) => { integerSelect(5) })
+const _6 = document.querySelector('#six')
+_6.addEventListener('click', (event) => { integerSelect(6) })
+
+const _7 = document.querySelector('#seven')
+_7.addEventListener('click', (event) => { integerSelect(7) })
+const _8 = document.querySelector('#eight')
+_8.addEventListener('click', (event) => { integerSelect(8) })
+const _9 = document.querySelector('#nine')
+_9.addEventListener('click', (event) => { integerSelect(9) })
+
+const _0 = document.querySelector('#zero')
+_0.addEventListener('click', (event) => { integerSelect(0) })
 
 const _add = document.querySelector('#add')
 const _subtract = document.querySelector('#subtract')
