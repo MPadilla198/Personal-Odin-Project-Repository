@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'ChunkFive Print';
+    src: url('fonts/ChunkFivePrint.woff2') format('woff2'),
+        url('fonts/ChunkFivePrint.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('fonts/FiraSans-Regular.woff2') format('woff2'),
+        url('fonts/FiraSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* General setup */
+
+html {
+  font-size: 10px;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Typography */
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h1, h2 {
+    font-family: 'ChunkFive Print', serif;
+}
+
+p {
+  font-size: 1.4rem;
+  font-family: 'Fira Sans', serif;
+  line-height: 1.6;
+  word-spacing: 0.6rem;
+}
